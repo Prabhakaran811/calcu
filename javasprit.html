@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            text-align: center;
+        }
+        button{
+            height: 50px;
+            text-align: center;
+        }
+        .hh{
+            text-align: center;
+            background-color: aqua;
+            border-radius: 50px;
+        }
+        .oo{
+            background-color:rebeccapurple ;
+            border-radius: 50px;
+        }
+        .uu{
+            background-color: blue;
+            border-radius: 50px;
+            width: 100px;
+        }
+        .pp{
+            background-color: brown;
+            border-radius: 50px;
+            width: 100px;
+        }
+        .pl{
+            background-color: green;
+            border-radius: 50px;
+            width: 100px;
+        }
+        .yy{
+            background-color:cadetblue;
+            border-radius: 50px;
+        }
+        .body{
+            background-color: antiquewhite;
+            border-left: 8px solid red;
+            border-right: 8px solid rebeccapurple;
+            border-top: 8px solid firebrick ;
+            border-bottom: 8px solid peru ;
+            /* background-color:black; */
+            height: 500px;
+            width: 400px;
+            margin-top: 100px; 
+            margin-left: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="body">
+    <h1>CALCULATOR</h1>
+    <input class="hh" id='i1' type="number" placeholder="ENTER YOUR INPUT"><br><br>
+    <input class="oo" id='i2' type="number" placeholder="ENTER YOUR INPUT"><br><br>
+    <button class="uu" onclick="add()">+</button>
+    <button class="pp" onclick="sub()">-</button>
+    <button class="pl" onclick=" div()">/</button><br><br>
+    <input class="yy"id="r" type="number" placeholder="RESULT">
+    <script>
+        function add(){
+            let int1 = Number(document.getElementById('i1').value)
+            let int2 = Number(document.getElementById('i2').value)
+            let res =  int1+int2;
+            document.getElementById('r').value=res;
+        }
+        function sub(){
+            let int1 = Number(document.getElementById('i1').value)
+            let int2 = Number(document.getElementById('i2').value)
+            let res =  int1-int2;
+            document.getElementById('r').value=res;
+        }
+        function div(){
+            let int1 = Number(document.getElementById('i1').value)
+            let int2 = Number(document.getElementById('i2').value)
+            let res =  int1/int2;
+            document.getElementById('r').value=res;
+        }
+    </script>
+
+</body>
+</html>
